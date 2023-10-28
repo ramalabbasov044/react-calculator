@@ -10,7 +10,7 @@ const Header = () => {
                 <FormatHour />
             </p>
             <div>
-                <Battery />
+                {/* <Battery /> */}
             </div>
         </div>
     </>
