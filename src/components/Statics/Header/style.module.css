@@ -1,0 +1,14 @@
+.timeTitle{
+    color: var(--dark-label-primary, #FFF);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.topHeader{
+    padding: 12px 14.34px 11px 21px;
+    display: flex;
+    justify-content: space-between;
+}

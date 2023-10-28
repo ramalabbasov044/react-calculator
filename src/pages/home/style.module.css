@@ -1,0 +1,75 @@
+.screen{
+    width: 100%;
+    background: #151515;
+}
+
+.buttonGroup{
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 19px;
+}
+
+.clearButton{
+    width: 73px;
+    height: 75px;
+    border-radius: 9px;
+    background: #FF5959;
+    border: 0;
+
+    color: #343434;
+    font-family: "Inter";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.operator{
+    width: 73px;
+    height: 75px;
+    border-radius: 9px;
+    background: #343434;
+    border: 0;
+
+    color: #66FF7F;
+    font-family: "Inter";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.numberButton{
+    width: 73px;
+    height: 75px;
+    border-radius: 9px;
+    background: #343434;
+    border: 0;
+    
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.resultOperator{
+    width: 73px;
+    height: 75px;
+    border-radius: 9px;
+    background: #66FF7F;
+    border: 0;
+
+    color: #343434;
+    font-family: "Inter";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

@@ -1,0 +1,30 @@
+.screenBody{
+    display: flex;
+    justify-content: flex-end;
+    padding: 28px 19px 50px 19px;
+    height: 100%;
+}
+
+.resultNumber{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.clearButton{
+    width: 73px;
+    height: 75px;
+    border-radius: 9px;
+    background: #FF5959;
+
+    color: #343434;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
