@@ -26,12 +26,6 @@ const Home = () => {
     console.log("err");
   }
 
-  let randomOperator = () => {
-      let arr = ["-","+"]
-      let i = Math.floor(Math.random() * 2)
-      showScreen(arr[i])
-  }
-
   const resultScreen = () => {
       const result = eval(totValue.join(''))
       setTotValue([result.toFixed(2)])
@@ -71,7 +65,7 @@ const Home = () => {
               <button onClick={() => showScreen('+')} className={styles.operator}>+</button>
 
             {/* Group 5 */}
-              <button onClick={randomOperator} className={styles.numberButton}>+/-</button>
+              <button onClick={() => showScreen("+" || "-")} className={styles.numberButton}>+/-</button>
               <button onClick={() => showScreen(0)} className={styles.numberButton}>0</button>
               <button onClick={() => showScreen(".")} className={styles.numberButton}>.</button>
               <button onClick={() => resultScreen()} className={styles.resultOperator}>=</button>
