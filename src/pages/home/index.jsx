@@ -24,8 +24,9 @@ const Home = () => {
 
       let lastItem = totValue.at(-1)
       let lastArr = totValue.slice(index+1,lastItem)
-      let number2 = parseInt(lastArr);
-      
+      let number2 = parseInt(lastArr.join(""))
+      console.log(number2);
+
       setTotValue([number1 * number2]);
   }
 
