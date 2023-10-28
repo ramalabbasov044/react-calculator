@@ -16,3 +16,11 @@
     height: 100%;
     border-radius: 3px;
 }
+
+.batteryCount{
+    width: 26px;
+    font-weight: 600;
+    font-size: 7px;
+    text-align: center;
+    font-family: "Inter";
+}
