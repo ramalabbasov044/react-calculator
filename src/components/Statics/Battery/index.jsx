@@ -7,11 +7,10 @@ const BatteryComponent = () => {
     useEffect(() => {
         navigator.getBattery().then((batteryInfo) => {
             let batteryToFaiz = batteryInfo.level * 100;
-            setBattery(batteryToFaiz);
-        }).catch((error) => {
-            console.error('Battery status error:', error);
-        });
-    }, []); 
+            setBattery(batteryToFaiz.toFixed(0));
+        })
+    },[]); 
+
 
     return (
         <>

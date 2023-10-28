@@ -7,6 +7,7 @@ const Home = () => {
   const [value, setValue] = useState(0)
   const [totValue, setTotValue] = useState([])
 
+
   const showScreen = (num) => {
     setValue(num)
     setTotValue([...totValue, num])
@@ -20,8 +21,8 @@ const Home = () => {
     if (totValue.length > 0) {
       let umumiTotval = [...totValue];
       // console.log(umumiTotval+"asd");
-
-      setTotValue(umumiTotval.pop());
+      umumiTotval.pop()
+      setTotValue(umumiTotval);
     }
     console.log("err");
   }
@@ -29,6 +30,7 @@ const Home = () => {
   const resultScreen = () => {
       const result = eval(totValue.join(''))
       setTotValue([result.toFixed(2)])
+      localStorage.setItem("totValue",[result.toFixed(2)])
   }
 
   return (
