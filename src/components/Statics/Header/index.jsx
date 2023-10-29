@@ -7,7 +7,7 @@ const Header = () => {
   const [isCharging, setIsCharging] = useState(false)
 
   useEffect(() => {
-      navigator.getBattery().then((batteryInfo) => {
+      navigator?.getBattery().then((batteryInfo) => {
         setIsCharging(batteryInfo.charging)
       })
   },[]); 

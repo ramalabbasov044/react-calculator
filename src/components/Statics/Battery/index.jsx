@@ -5,7 +5,7 @@ const BatteryComponent = () => {
     const [battery, setBattery] = useState();
 
     useEffect(() => {
-        navigator.getBattery().then((batteryInfo) => {
+        navigator?.getBattery().then((batteryInfo) => {
             let batteryToFaiz = batteryInfo.level * 100;
             setBattery(batteryToFaiz.toFixed(0));
         })
