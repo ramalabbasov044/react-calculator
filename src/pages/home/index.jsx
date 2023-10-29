@@ -48,6 +48,7 @@ const Home = () => {
         item2.map((item) => item2Full+=item)
         setTotValue([item1Full * item2Full])
       }
+
       if(totValue.includes("/")){
         let indexEl = findIndexOfElement("/")
 
@@ -60,6 +61,7 @@ const Home = () => {
         item2.map((item) => item2Full+=item)
         setTotValue([item1Full / item2Full])
       }
+
       if(totValue.includes("-")){
         let indexEl = findIndexOfElement("-")
 
@@ -72,6 +74,7 @@ const Home = () => {
         item2.map((item) => item2Full+=item)
         setTotValue([item1Full - item2Full])
       }
+
       if(totValue.includes("+")){
         let indexEl = findIndexOfElement("+")
 
@@ -83,6 +86,19 @@ const Home = () => {
         let item2Full = ""
         item2.map((item) => item2Full+=item)
         setTotValue([item1Full + item2Full])
+      }
+
+      if(totValue.includes("%")){
+        let indexEl = findIndexOfElement("%")
+
+        let item1 = totValue.slice(0,indexEl)
+        let item2 = indexEl !==-1 ? totValue.slice(indexEl + 1) : null
+        let item1Full = ""
+        item1.map((item) => item1Full+=item)
+
+        let item2Full = ""
+        item2.map((item) => item2Full+=item)
+        setTotValue([item1Full / 100 * item2Full])
       }
   }
 
