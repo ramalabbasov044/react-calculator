@@ -2,15 +2,10 @@ import { useState } from 'react'
 import Screen from '../../components/Statics/Screen'
 import styles from './style.module.css'
 import Header from '../../components/Statics/Header/index'
-import { array } from 'i/lib/util'
 
 const Home = () => {
   const [value, setValue] = useState(0)
   const [totValue, setTotValue] = useState([])
-
-  let obj = {
-    "7" : 7
-  }
 
   const showScreen = (num) => {
     setValue(num)
