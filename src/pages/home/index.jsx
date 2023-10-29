@@ -23,11 +23,16 @@ const Home = () => {
       umumiTotval.pop()
       setTotValue(umumiTotval);
     }
-    console.log("err");
   }
 
   let findIndexOfElement = (param) => {
       return totValue.indexOf(param)
+  }
+
+  let arrToString = (array) => {
+    let empStr = ""
+    array.map((item) => empStr+=item)
+    return empStr
   }
 
   let resultScreen = () => {
@@ -36,12 +41,8 @@ const Home = () => {
 
         let item1 = totValue.slice(0,indexEl)
         let item2 = indexEl !==-1 ? totValue.slice(indexEl + 1) : null
-        let item1Full = ""
-        item1.map((item) => item1Full+=item)
 
-        let item2Full = ""
-        item2.map((item) => item2Full+=item)
-        setTotValue([item1Full * item2Full])
+        setTotValue([arrToString(item1) * arrToString(item2)])
       }
 
       if(totValue.includes("/")){
@@ -49,12 +50,8 @@ const Home = () => {
 
         let item1 = totValue.slice(0,indexEl)
         let item2 = indexEl !==-1 ? totValue.slice(indexEl + 1) : null
-        let item1Full = ""
-        item1.map((item) => item1Full+=item)
 
-        let item2Full = ""
-        item2.map((item) => item2Full+=item)
-        setTotValue([item1Full / item2Full])
+        setTotValue([arrToString(item1) / arrToString(item2)])
       }
 
       if(totValue.includes("-")){
@@ -62,12 +59,8 @@ const Home = () => {
 
         let item1 = totValue.slice(0,indexEl)
         let item2 = indexEl !==-1 ? totValue.slice(indexEl + 1) : null
-        let item1Full = ""
-        item1.map((item) => item1Full+=item)
 
-        let item2Full = ""
-        item2.map((item) => item2Full+=item)
-        setTotValue([item1Full - item2Full])
+        setTotValue([arrToString(item1) - arrToString(item2)])
       }
 
       if(totValue.includes("+")){
@@ -75,12 +68,8 @@ const Home = () => {
 
         let item1 = totValue.slice(0,indexEl)
         let item2 = indexEl !==-1 ? totValue.slice(indexEl + 1) : null
-        let item1Full = ""
-        item1.map((item) => item1Full+=item)
 
-        let item2Full = ""
-        item2.map((item) => item2Full+=item)
-        setTotValue([item1Full + item2Full])
+        setTotValue([parseInt(arrToString(item1)) + parseInt(arrToString(item2))])
       }
 
       if(totValue.includes("%")){
@@ -88,12 +77,8 @@ const Home = () => {
 
         let item1 = totValue.slice(0,indexEl)
         let item2 = indexEl !==-1 ? totValue.slice(indexEl + 1) : null
-        let item1Full = ""
-        item1.map((item) => item1Full+=item)
 
-        let item2Full = ""
-        item2.map((item) => item2Full+=item)
-        setTotValue([item1Full / 100 * item2Full])
+        setTotValue([arrToString(item1) / 100 * arrToString(item2)])
       }
   }
 
